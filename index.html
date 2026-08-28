@@ -162,9 +162,36 @@
     .persona-right { grid-template-columns: 1fr; }
     .process-step::after { display: none; }
   }
+  /* ---------- top nav ---------- */
+  .topbar { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.86); backdrop-filter: saturate(140%) blur(12px); -webkit-backdrop-filter: saturate(140%) blur(12px); border-bottom: 1px solid var(--border); }
+  .topbar .wrap { max-width: 1100px; margin: 0 auto; padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 62px; }
+  .home-link { font-weight: 600; font-size: 0.95rem; letter-spacing: 0.01em; color: var(--text); text-decoration: none; display: inline-flex; align-items: center; gap: 7px; transition: color 0.15s; }
+  .home-link:hover { color: var(--blue); }
+  .navlinks { display: flex; gap: 26px; }
+  .navlinks a { font-size: 0.85rem; color: var(--text-muted); text-decoration: none; font-weight: 500; transition: color 0.15s; }
+  .navlinks a:hover { color: var(--blue); }
+  .section, .hero { scroll-margin-top: 62px; }
+  @media (max-width: 860px) { .navlinks { gap: 18px; } .navlinks a { font-size: 0.8rem; } }
+  @media (max-width: 760px) { .navlinks { display: none; } }
 </style>
 </head>
 <body>
+
+<!-- TOP NAV -->
+<div class="topbar">
+  <div class="wrap">
+    <a class="home-link" href="https://luxenodesigns.com/">Home</a>
+    <nav class="navlinks">
+      <a href="#overview">Overview</a>
+      <a href="#problem">Problem</a>
+      <a href="#process">Process</a>
+      <a href="#research">Research</a>
+      <a href="#design">Design</a>
+      <a href="#testing">Testing</a>
+      <a href="#reflection">Reflection</a>
+    </nav>
+  </div>
+</div>
 
 <header class="hero">
   <div class="hero-inner">
@@ -180,7 +207,7 @@
   </div>
 </header>
 
-<section class="section">
+<section class="section" id="overview">
   <div class="section-inner">
     <div class="section-label"><span>Overview</span></div>
     <h2>Solo travel is growing. The tools to support it are not.</h2>
@@ -195,7 +222,7 @@
   </div>
 </section>
 
-<section class="section" style="background: var(--sand);">
+<section class="section" id="problem" style="background: var(--sand);">
   <div class="section-inner">
     <div class="section-label"><span>Problem</span></div>
     <h2>Three gaps that keep solo travelers from connecting</h2>
@@ -209,7 +236,7 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="process">
   <div class="section-inner">
     <div class="section-label"><span>Process</span></div>
     <h2>Building from zero, research first, pixels last</h2>
@@ -239,7 +266,7 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="research">
   <div class="section-inner">
     <div class="section-label"><span>Research</span></div>
     <h2>Five travelers, five honest perspectives on solo co-living</h2>
@@ -339,7 +366,7 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="design">
   <div class="section-inner">
     <div class="section-label"><span>Brand &amp; Visual Design</span></div>
     <h2>A calm, community-driven visual identity</h2>
@@ -362,7 +389,7 @@
   </div>
 </section>
 
-<section class="section" style="background: var(--sand);">
+<section class="section" id="testing" style="background: var(--sand);">
   <div class="section-inner">
     <div class="section-label"><span>Usability Testing</span></div>
     <h2>Two scenarios, five participants, clear validation</h2>
@@ -400,7 +427,7 @@
   </div>
 </section>
 
-<section class="section" style="background: var(--sand);">
+<section class="section" id="reflection" style="background: var(--sand);">
   <div class="section-inner">
     <div class="section-label"><span>Reflection</span></div>
     <h2>What building from scratch actually teaches you</h2>
